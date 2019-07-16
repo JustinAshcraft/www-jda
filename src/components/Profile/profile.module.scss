@@ -1,0 +1,24 @@
+section {
+    //margin: 3em 0;
+    text-align: center;
+    align-items: center;
+}
+
+.profilePic {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid #888;
+    border-radius: 10rem;
+    //background-color: grey;
+    //opacity: 1 !important;
+    margin: 1em;
+    background-image: url('selfie.jpg');
+    background-size: 170px 170px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+i {
+    margin: 15px;
+    color: grayscale($color: #999999);
+}
