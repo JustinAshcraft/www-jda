@@ -14,6 +14,8 @@ function Profile() {
                 <div className={ProfileStyle.profilePic}></div>
                 <h1>Justin Ashcraft</h1>
                 <h3>Full-stack web developer</h3>
+                <p>I'm a technologist with over 15 years experience planning, designing and developing insurance and financial business solutions.</p>
+                <br/>
         </Container>
 
     </section>
