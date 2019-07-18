@@ -72,37 +72,6 @@ function Skills() {
         </div>
       </Paper>
     </Container>
-    <Container maxWidth="md"><h1>Projects</h1>
-      <Grid container className={classes.root} spacing={3}>
-        <Grid item >
-          <Grid container justify="center" spacing={spacing}>
-            <Grid item>
-              <Paper  >
-                <h3>Retirement Plan Enroll​ment Micro-sites</h3>
-                This project helped aliviate millions of dollars the business spent creating custom printed retirement participant booklets. 
-                The Angular single-page application queries a REST API and returns secific plan details. Using this data the application then 
-                calls a back-end Adobe Experience Manager content repository and dynamically generates content specific to the customer.<br />
-
-                <i className="fab fa-angular fa-w-12 fa-2x">
-                  <div>
-                    <Typography variant="subtitle2" color="inherit">
-                      Angular
-                  </Typography>
-                  </div>
-                </i>
-              </Paper>
-              
-            </Grid>
-            <Grid item>
-              <Paper><h3>Building Better Portfolios</h3>Angular 4+ single page application that compared index funds with American Funds allowing Advisors to compare past performance. Specifically build for iPad and offline capabilities.</Paper>
-            </Grid>
-            <Grid item>
-              <Paper><h3>Transaction Auto Agreements</h3>Angular application to allowed shareholders to create automated purchase agreements at a scheduled time periods.</Paper>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Container>
 
   </section>
 }

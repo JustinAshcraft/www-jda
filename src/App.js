@@ -4,6 +4,7 @@ import React from 'react';
 
 import Profile from "./components/Profile/profile";
 import Skills from "./components/Skills/skills";
+import Projects from "./components/Projects/projects";
 import Background from './components/Background/background';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -33,6 +34,7 @@ function App(props) {
         </AppBar>
         <Profile></Profile>
         <Skills></Skills>
+        <Projects></Projects>
         
       </ThemeProvider>
     </div>
