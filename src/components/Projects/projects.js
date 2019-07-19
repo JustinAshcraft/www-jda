@@ -10,6 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import img_cg_rpenroll from '../../images/RPEnroll_1024x768.jpg';
+import img_cg_autoagreements from '../../images/AdvisorSite_1024x768.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -23,8 +24,8 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(2),
     },
     cardGrid: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
+        paddingTop: theme.spacing(4),
+        paddingBottom: theme.spacing(4),
     },
     card: {
         height: '10',
@@ -34,7 +35,7 @@ const useStyles = makeStyles(theme => ({
         padding: '10'
     },
     cardMedia: {
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '76.25%', // 16:9
         //backgroundSize: 'auto'
     },
     cardContent: {
@@ -86,7 +87,7 @@ function Projects() {
 
                             <CardMedia
                                 className={classes.cardMedia}
-                                image="http://placehold.it/1024x768?text=Coming Soon"
+                                image={img_cg_autoagreements}
                                 title="Image title"
                             />
                             <CardContent className={classes.cardContent}>
