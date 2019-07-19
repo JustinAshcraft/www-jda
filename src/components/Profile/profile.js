@@ -1,9 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-
 
 import ProfileStyle from './profile.module.scss'
 
@@ -11,9 +8,12 @@ function Profile() {
     return <section>
 
         <Container maxWidth="md">
+            <br />
             <div className={ProfileStyle.profilePic}></div>
-            <h1>Justin Ashcraft</h1>
-            <h3>Full-stack Web Developer</h3>
+            <h1 className={ProfileStyle.h1}>Justin Ashcraft</h1>
+            <h3 className={ProfileStyle.h3}>Full-stack Web Developer</h3>
+            <br />
+
             <p>
                 I'm a technologist with ​over 15 years experience ​planning, designing and developing insurance and
                 financial business solutions. I work with business partners and stakeholders to develop products and
@@ -22,6 +22,7 @@ function Profile() {
                 to build solutions that are easy to understand and use.
             </p>
             <br />
+
         </Container>
 
     </section>
