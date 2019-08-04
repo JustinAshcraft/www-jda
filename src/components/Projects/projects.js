@@ -2,15 +2,18 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
+//import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { Grid, Cell } from "styled-css-grid";
 
 import img_cg_rpenroll from '../../images/RPEnroll_1024x768.jpg';
-import img_cg_autoagreements from '../../images/AdvisorSite_1024x768.jpg';
+import img_cg_buildingportfolios from '../../images/AdvisorSite_1024x768.jpg';
+import img_cg_autoagreements from '../../images/AutoTrans_1024x1045.jpg';
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -40,6 +43,23 @@ const useStyles = makeStyles(theme => ({
     },
     cardContent: {
         flexGrow: 1,
+    },
+}));
+
+const gridStyles = makeStyles(theme => ({
+    gridContainer: {
+        //display: Grid,
+        //flow: 'auto',
+        //gridTemplateColumns: 'auto auto auto',
+        backgroundColor: '#2196F3',
+        //padding: '10',
+        
+    }, 
+    cell: {
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        textAlign: 'center',
+        //padding: '20 0',
+        fontSize: '30',
     }
 }));
 
@@ -47,9 +67,10 @@ const useStyles = makeStyles(theme => ({
 
 function Projects() {
     const classes = useStyles();
+    const divGrid = gridStyles();
     return <section>
         <CssBaseline />
-        
+
         <Container maxWidth="md" className={classes.cardGrid}>
             <h1>Projects</h1>
             <Card className={classes.card}>
@@ -77,7 +98,7 @@ function Projects() {
 
                 <CardMedia
                     className={classes.cardMedia}
-                    image={img_cg_autoagreements}
+                    image={img_cg_buildingportfolios}
                     title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
@@ -97,7 +118,7 @@ function Projects() {
 
                 <CardMedia
                     className={classes.cardMedia}
-                    image="http://placehold.it/1024x768?text=Coming Soon"
+                    image={img_cg_autoagreements}
                     title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
