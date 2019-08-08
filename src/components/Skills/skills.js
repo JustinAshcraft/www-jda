@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
@@ -78,9 +77,5 @@ function Skills() {
 
   </section>
 }
-
-Skills.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default Skills

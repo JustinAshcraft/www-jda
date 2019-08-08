@@ -1,7 +1,5 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import PropTypes from 'prop-types';
-
 import ProfileStyle from './profile.module.scss'
 
 function Profile() {
@@ -27,9 +25,5 @@ function Profile() {
 
     </section>
 }
-
-Profile.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 export default Profile
