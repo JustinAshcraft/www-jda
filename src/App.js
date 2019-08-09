@@ -11,8 +11,6 @@ import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import theme from './theme';
-
-import './App.scss';
 import CryptoTicker from './components/CryptoTicker/cryptoticker';
 
 function App(props) {
@@ -24,9 +22,10 @@ function App(props) {
         <Background></Background>
         <AppBar position="static" color="default">
           <Toolbar>
-            <Typography variant="h6" color="inherit">Justin Ashcraft</Typography>
+            {/* <Typography variant="h6" color="inherit">Justin Ashcraft</Typography> */}
           </Toolbar>
         </AppBar>
+        
         <Profile></Profile>
         <Skills></Skills>
         <Projects></Projects>

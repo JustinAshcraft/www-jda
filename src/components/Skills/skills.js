@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   control: {
     padding: theme.spacing(2),
-  },
+  }
 }));
 
 function Skills() {

@@ -1,9 +1,40 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
+const styles = {
+    root: {
+        flexGrow: 1,
+        justifyContent: 'center'
+    },
+    textStyle: {
+        fontSize: 20
+    },
+    paper: {
+        height: 175,
+        width: 175,
+        padding: 5
+    },
+    h2: {
+        textAlign: 'center',
+        fontSize: 30,
+        margin: 1
+    },
+    name: {
+        fontSize: 12,
+        paddingLeft: 2
+    },
+    price: {
+        paddingTop: 10,
+        paddingBottom: 10,
+        textAlign: 'center'
+    },
+    change: {
+        textAlign: 'center'
+    }
+}
 
 class CryptoTicker extends React.Component {
     state = {
@@ -12,22 +43,8 @@ class CryptoTicker extends React.Component {
         error: null
     };
 
-    useStyles = makeStyles(theme => ({
-        root: {
-          flexGrow: 1,
-        },
-        paper: {
-          height: 140,
-          width: 100,
-          padding: 15
-        },
-        control: {
-          padding: theme.spacing(2),
-        }
-    }));
-
     fetchCryptoPrices() {
-        fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=3`)
+        fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=10`)
             .then(response => response.json())
             .then(data =>
                 this.setState({
@@ -43,31 +60,34 @@ class CryptoTicker extends React.Component {
     }
 
     render() {
-        
+        //const { textStyle, h1, containerStyle, paper } = styles;
         const { isLoading, crypto, error } = this.state;
-        const classes = this.useStyles;
         return (
-            <Container maxWidth="md">
-                <h1>Crypto Ticker</h1>
+            <Container maxWidth="md" style={styles.root} spacing={2}>
+                
+                <h1 align='center' style={styles.textStyle}>Cryptocurrencies</h1>
+                <h3>Top 10 by Market Cap.</h3>
                 {error ? <p>{error.message}</p> : null}
-                <Grid container className={classes.root} spacing={2} padding={10}>
-                    <Grid item>
+
+                <Grid container justify="center" spacing={2}>
                     {!isLoading ? (
                         crypto.map(crypto => {
                             const { id, name, symbol, price_usd, percent_change_24h } = crypto;
                             return (
-                                <Paper key={id} className={classes.paper}>
-                                    <p>{name} ({symbol})</p>
-                                    <p>Current price: {price_usd}</p>
-                                    <p>Percent change 24hrs: {percent_change_24h}</p>
-                                    <hr />
-                                </Paper>
+
+                                <Grid key={id} item >
+                                    <Paper style={styles.paper}>
+                                        <Typography variant="h4" color="inherit">{symbol}</Typography>
+                                        <Typography style={styles.name} variant="subtitle1" color="inherit">{name}</Typography>
+                                        <Typography style={styles.price} variant="h6" color="inherit">$ {price_usd}</Typography>
+                                        <Typography style={styles.change} variant="h4" color="inherit">{percent_change_24h} %</Typography>
+                                    </Paper>
+                                </Grid>
                             );
                         })
                     ) : (
                             <h3>Loading...</h3>
                         )}
-                    </Grid>
                 </Grid>
             </Container>
         );
@@ -76,3 +96,4 @@ class CryptoTicker extends React.Component {
 }
 
 export default CryptoTicker
+
