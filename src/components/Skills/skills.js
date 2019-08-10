@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
   },
   control: {
     padding: theme.spacing(2),
+  },
+  skills: {
+    textAlign: 'center'
   }
 }));
 
@@ -38,34 +41,34 @@ function Skills() {
               </div>
             </i></Grid>
             <Grid item><i className="fab fa-js fa-w-12 fa-5x"><div>
-              <Typography variant="subtitle2" color="inherit">
+              <Typography variant="subtitle2" color="inherit" align='center'>
                 JavaScript
           </Typography>
             </div></i></Grid>
             <Grid item><i className="fab fa-css3-alt fa-w-12 fa-5x">
               <div>
-                <Typography variant="subtitle2" color="inherit">
+                <Typography variant="subtitle2" color="inherit" align='center'>
                   CSS3
                   </Typography>
               </div>
             </i></Grid>
             <Grid item><i className="fab fa-angular fa-w-12 fa-5x">
               <div>
-                <Typography variant="subtitle2" color="inherit">
+                <Typography variant="subtitle2" color="inherit" align='center'>
                   Angular
                   </Typography>
               </div>
             </i></Grid>
             <Grid item><i className="fab fa-react fa-w-12 fa-5x">
               <div>
-                <Typography variant="subtitle2" color="inherit">
+                <Typography variant="subtitle2" color="inherit" align='center'>
                   React
                   </Typography>
               </div>
             </i></Grid>
             <Grid item><i className="fab fa-aws fa-w-12 fa-5x">
               <div>
-                <Typography variant="subtitle2" color="inherit">
+                <Typography variant="subtitle2" color="inherit" align='center'>
                   AWS
                   </Typography>
               </div>
