@@ -24,15 +24,21 @@ const styles = {
     },
     name: {
         fontSize: 12,
-        paddingLeft: 2
+        paddingLeft: 2,
+        fontColor: '#999'
     },
     price: {
         paddingTop: 10,
         paddingBottom: 10,
         textAlign: 'center'
     },
-    change: {
-        textAlign: 'center'
+    positive: {
+        textAlign: 'center',
+        backgroundColor: 'green'
+    },
+    negative: {
+        textAlign: 'center',
+        backgroundColor: 'red'
     }
 }
 
@@ -60,12 +66,10 @@ class CryptoTicker extends React.Component {
     }
 
     render() {
-        //const { textStyle, h1, containerStyle, paper } = styles;
         const { isLoading, crypto, error } = this.state;
         return (
             <Container maxWidth="md" style={styles.root} spacing={2}>
-                
-                <h1 align='center' style={styles.textStyle}>Cryptocurrencies</h1>
+                <h1>Cryptocurrencies</h1>
                 <h3>Top 10 by Market Cap.</h3>
                 {error ? <p>{error.message}</p> : null}
 
@@ -79,14 +83,14 @@ class CryptoTicker extends React.Component {
                                     <Paper style={styles.paper}>
                                         <Typography variant="h4" color="inherit">{symbol}</Typography>
                                         <Typography style={styles.name} variant="subtitle1" color="inherit">{name}</Typography>
-                                        <Typography style={styles.price} variant="h6" color="inherit">$ {price_usd}</Typography>
-                                        <Typography style={styles.change} variant="h4" color="inherit">{percent_change_24h} %</Typography>
+                                        <Typography style={styles.price} variant="h5" color="inherit">$ { parseInt(price_usd, 10).toFixed(2) } </Typography>
+                                        <Typography style={parseInt(percent_change_24h) > 0 ? styles.positive : styles.negative} variant="subtitle1">{percent_change_24h} %</Typography>
                                     </Paper>
                                 </Grid>
                             );
                         })
                     ) : (
-                            <h3>Loading...</h3>
+                            <h3>Fetching crypto data...</h3>
                         )}
                 </Grid>
             </Container>
