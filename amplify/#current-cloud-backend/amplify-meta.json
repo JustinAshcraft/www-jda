@@ -1,35 +1,15 @@
 {
-	"providers": {
-		"awscloudformation": {
-			"AuthRoleName": "myapp-dev-20190604112157-authRole",
-			"UnauthRoleArn": "arn:aws:iam::926076633342:role/myapp-dev-20190604112157-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::926076633342:role/myapp-dev-20190604112157-authRole",
-			"Region": "us-west-2",
-			"DeploymentBucketName": "myapp-dev-20190604112157-deployment",
-			"UnauthRoleName": "myapp-dev-20190604112157-unauthRole",
-			"StackName": "myapp-dev-20190604112157",
-			"StackId": "arn:aws:cloudformation:us-west-2:926076633342:stack/myapp-dev-20190604112157/a39018b0-86f5-11e9-bb37-06b57ba4e740"
-		}
-	},
-	"hosting": {
-		"S3AndCloudFront": {
-			"service": "S3AndCloudFront",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/myapp-dev-20190604112157-deployment/amplify-cfn-templates/hosting/template.json",
-				"logicalId": "hostingS3AndCloudFront"
-			},
-			"lastPushTimeStamp": "2019-06-11T23:47:13.102Z",
-			"output": {
-				"CloudFrontSecureURL": "https://d3ltgl5oym6k6b.cloudfront.net",
-				"S3BucketSecureURL": "https://jda-20190611154937-hostingbucket-dev.s3.amazonaws.com",
-				"WebsiteURL": "http://jda-20190611154937-hostingbucket-dev.s3-website-us-west-2.amazonaws.com",
-				"CloudFrontDistributionID": "E3ON9DILS4OCG6",
-				"Region": "us-west-2",
-				"HostingBucketName": "jda-20190611154937-hostingbucket-dev",
-				"CloudFrontDomainName": "d3ltgl5oym6k6b.cloudfront.net"
-			},
-			"lastPushDirHash": "j9nxmgCiIgcZlTAMnFKdhGiONEs="
-		}
-	}
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-jda-prod-143501-authRole",
+            "UnauthRoleArn": "arn:aws:iam::926076633342:role/amplify-jda-prod-143501-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::926076633342:role/amplify-jda-prod-143501-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-jda-prod-143501-deployment",
+            "UnauthRoleName": "amplify-jda-prod-143501-unauthRole",
+            "StackName": "amplify-jda-prod-143501",
+            "StackId": "arn:aws:cloudformation:us-west-2:926076633342:stack/amplify-jda-prod-143501/236ca7a0-1f8b-11ea-add5-06ca8b36c6d4",
+            "AmplifyAppId": "dok97fi8m6208"
+        }
+    }
 }
