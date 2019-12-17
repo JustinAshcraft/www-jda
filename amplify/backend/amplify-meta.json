@@ -15,6 +15,11 @@
         "S3AndCloudFront": {
             "service": "S3AndCloudFront",
             "providerPlugin": "awscloudformation"
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-jda-prod-100419-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2019-12-15T18:14:37.039Z"
         }
     }
 }
