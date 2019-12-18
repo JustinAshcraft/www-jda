@@ -9,7 +9,7 @@ function Profile() {
             <br />
             <div className={ProfileStyle.profilePic}></div>
             <h1 className={ProfileStyle.h1}>Justin Ashcraft</h1>
-            <h3 className={ProfileStyle.h3}>Full Stack Web Developer</h3>
+            <h3 className={ProfileStyle.h3}>Full Stack Engineer</h3>
             <br />
 
             <p>
