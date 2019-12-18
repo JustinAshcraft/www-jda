@@ -71,7 +71,11 @@
 		"hostingS3AndCloudFront": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
+<<<<<<< HEAD
 				"TemplateURL": "https://s3.amazonaws.com/amplify-jda-prod-143501-deployment/amplify-cfn-templates/hosting/template.json",
+=======
+				"TemplateURL": "https://s3.amazonaws.com/amplify-jda-prod-100419-deployment/amplify-cfn-templates/hosting/template.json",
+>>>>>>> 3d45ad317cd039ca43c71e29885bfaa39a583c55
 				"Parameters": {
 					"bucketName": "jda-20190611154937-hostingbucket",
 					"env": "prod"
