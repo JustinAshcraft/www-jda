@@ -10,7 +10,7 @@ const styles = {
         justifyContent: 'center'
     },
     textStyle: {
-        fontSize: 20
+        fontSize: 20,
     },
     paper: {
         height: 175,
@@ -21,6 +21,9 @@ const styles = {
         textAlign: 'center',
         fontSize: 30,
         margin: 1
+    },
+    a: {
+        color: '#eee'
     },
     name: {
         fontSize: 12,
@@ -49,6 +52,10 @@ class CryptoTicker extends React.Component {
         error: null
     };
 
+    componentDidMount() {
+        this.fetchCryptoPrices();
+    }
+
     fetchCryptoPrices() {
         fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=10`)
             .then(response => response.json())
@@ -59,10 +66,6 @@ class CryptoTicker extends React.Component {
                 })
             )
             .catch(error => this.setState({ error, isLoading: false }));
-    }
-
-    componentDidMount() {
-        this.fetchCryptoPrices();
     }
 
     render() {
@@ -93,6 +96,7 @@ class CryptoTicker extends React.Component {
                             <h3>Fetching crypto data...</h3>
                         )}
                 </Grid>
+                <Typography color='inherit' align='center'>API provided by <a href="http://www.coinmarketcap.com" target="new"><Typography color='textPrimary'>CoinMarketCap.com</Typography></a></Typography>
             </Container>
         );
     }
