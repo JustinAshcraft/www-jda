@@ -10,6 +10,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import img_cg_rpenroll from '../../images/RPEnroll_1024x768.jpg';
 import img_cg_buildingportfolios from '../../images/AdvisorSite_1024x768.jpg';
 import img_cg_autoagreements from '../../images/AutoTrans_1024x1045.jpg';
+import img_4wp_config from '../../images/4wp_configurator.png';
+import img_shutterfly_unitedhealth from '../../images/Shutterfly_UnitedHealth.png';
 
 
 const useStyles = makeStyles(theme => ({
@@ -49,9 +51,45 @@ function Projects() {
     const classes = useStyles();
     return <section>
         <CssBaseline />
+        <Container maxWidth="md" className={classes.cardGrid}>
+        <h1>Projects</h1>
+            <Card className={classes.card}>
+
+                <CardMedia
+                    className={classes.cardMedia}
+                    image={img_4wp_config}
+                    title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        Publicis Sapient - Polaris Inc, FourWheelParts.com
+                                            </Typography>
+                    <Typography>
+                        Angular SPA to view and purchase 4 wheel parts for off-road enthusiasts. Product included 3D rendering of products along with agumented reality of products on 3D vehicle.                                           </Typography>
+                </CardContent>
+            </Card>
+        </Container>
 
         <Container maxWidth="md" className={classes.cardGrid}>
-            <h1>Projects</h1>
+            <Card className={classes.card}>
+
+                <CardMedia
+                    className={classes.cardMedia}
+                    image={img_shutterfly_unitedhealth}
+                    title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        Shutterfly - UnitedHealth Document Procurement
+                                            </Typography>
+                    <Typography>
+                        This product was developed by Shutterfly Inc. in conjunction with their customer UnitedHealth to allow for the easy ordering, 
+                        customization and management of product and services print materials                                            </Typography>
+                </CardContent>
+            </Card>
+        </Container>
+
+        <Container maxWidth="md" className={classes.cardGrid}>
             <Card className={classes.card}>
 
                 <CardMedia
